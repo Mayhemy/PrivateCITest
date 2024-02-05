@@ -15,6 +15,9 @@
  */
 package com.google.cloud.teleport.templates.common;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.cloud.teleport.templates.common.DatastoreConverters.CheckNoKey;
 import com.google.cloud.teleport.templates.common.DatastoreConverters.CheckSameKey;
 import com.google.cloud.teleport.templates.common.DatastoreConverters.EntityJsonPrinter;
@@ -34,12 +37,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 import org.apache.beam.sdk.testing.NeedsRunner;
 import org.apache.beam.sdk.testing.PAssert;
 import org.apache.beam.sdk.testing.TestPipeline;
 import org.apache.beam.sdk.transforms.Create;
+import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.transforms.DoFnTester;
+import org.apache.beam.sdk.transforms.ParDo;
+import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PCollectionTuple;
 import org.apache.beam.sdk.values.TupleTag;
 import org.junit.Assert;
@@ -244,7 +252,7 @@ public class DatastoreConvertersTest implements Serializable {
   public void testCheckNoKeyAllInvalid() throws Exception {
 
     // Create test data
-    List<Entity> testEntitiesWithNoKey = new ArrayList<>();
+    List<Entity> testEntitiesWithNoKey = new LinkedList<>();
     List<String> expectedErrors = new ArrayList<>();
     EntityJsonPrinter entityJsonPrinter = new EntityJsonPrinter();
     for (int i = 0; i < entities.size(); i++) {
@@ -254,12 +262,14 @@ public class DatastoreConvertersTest implements Serializable {
               .putProperties("number", Value.newBuilder().setIntegerValue(1L).build())
               .build();
       testEntitiesWithNoKey.add(noKeyEntity);
-      expectedErrors.add(
+      // here we just create error message (as you did before), so we can sort it with the func
+      String errorMessage =
           ErrorMessage.newBuilder()
               .setMessage("Datastore Entity Without Key")
               .setData(entityJsonPrinter.print(noKeyEntity))
               .build()
-              .toJson());
+              .toJson();
+      expectedErrors.add(sortJsonString(errorMessage));
     }
 
     // Run the test
@@ -275,10 +285,36 @@ public class DatastoreConvertersTest implements Serializable {
                     .setFailureTag(failureTag)
                     .build());
 
-    // Check the results
+    PCollection<String> failureMessages = results.get(failureTag);
+
+    // sort the PCollection string to be in order
+    PCollection<String> actualParsedErrors = failureMessages.apply(ParDo.of(new SortJsonDoFn()));
+
     PAssert.that(results.get(successTag)).empty();
-    PAssert.that(results.get(failureTag)).containsInAnyOrder(expectedErrors);
+    PAssert.that(actualParsedErrors).containsInAnyOrder(expectedErrors);
+
     pipeline.run();
+  }
+
+  static class SortJsonDoFn extends DoFn<String, String> {
+    @ProcessElement
+    public void processElement(@Element String json, OutputReceiver<String> out) {
+      try {
+        // Convert JSON string to map with sorted keys
+        out.output(sortJsonString(json));
+      } catch (JsonProcessingException e) {
+        throw new RuntimeException("Failed to process json string", e);
+      }
+    }
+  }
+
+  public static String sortJsonString(String json) throws JsonProcessingException {
+
+    ObjectMapper objectMapper = new ObjectMapper();
+    Map<String, Object> map =
+        objectMapper.readValue(json, new TypeReference<Map<String, Object>>() {});
+    Map<String, Object> sortedMap = new TreeMap<>(map); // Call the method to deeply sort the map
+    return objectMapper.writeValueAsString(sortedMap);
   }
 
   /** Test {@link DatastoreConverters.CheckNoKey} with both correct and invalid entities. */
