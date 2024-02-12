@@ -57,6 +57,7 @@ runs:
       id: changed-files
       uses: tj-actions/changed-files@61ee456a9d0f512e7ecfdf28863634c97dae2d16
       with:
+        fetch-depth: 0
         separator: ','
     # It shouldn't take too long to build all of this, and it will at least
     # make running the target program easier
