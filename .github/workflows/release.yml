@@ -90,7 +90,7 @@ jobs:
         --it-private-connectivity="datastream-private-connect-us-central1" \
         --it-release=true
     - name: Upload Tests Report
-      uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
+      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
       if: always() # always run even if previous step fails
       with:
         name: surefire-test-results
