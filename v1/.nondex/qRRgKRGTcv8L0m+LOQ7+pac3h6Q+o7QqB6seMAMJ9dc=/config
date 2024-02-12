@@ -1,0 +1,11 @@
+nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1223286
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=qRRgKRGTcv8L0m+LOQ7+pac3h6Q+o7QqB6seMAMJ9dc=
+nondexLogging=CONFIG
+test=

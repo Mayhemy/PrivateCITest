@@ -1,0 +1,1338 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] ------------------------------------------------------------------------
+[[1;34mINFO[m] Detecting the operating system and CPU architecture
+[[1;34mINFO[m] ------------------------------------------------------------------------
+[[1;34mINFO[m] os.detected.name: linux
+[[1;34mINFO[m] os.detected.arch: x86_64
+[[1;34mINFO[m] os.detected.bitness: 64
+[[1;34mINFO[m] os.detected.version: 6.5
+[[1;34mINFO[m] os.detected.version.major: 6
+[[1;34mINFO[m] os.detected.version.minor: 5
+[[1;34mINFO[m] os.detected.release: ubuntu
+[[1;34mINFO[m] os.detected.release.version: 22.04
+[[1;34mINFO[m] os.detected.release.like.ubuntu: true
+[[1;34mINFO[m] os.detected.release.like.debian: true
+[[1;34mINFO[m] os.detected.classifier: linux-x86_64
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36mcom.google.cloud.teleport:classic-templates[0;1m >-------------[m
+[[1;34mINFO[m] [1mBuilding Google Cloud Teleport Classic 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mnondex-maven-plugin:2.1.1:nondex[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mclassic-templates[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M1:enforce[m [1m(enforce)[m @ [36mclassic-templates[0;1m ---[m
+[[1;33mWARNING[m] Failure to find io.confluent:kafka-avro-serializer:jar:5.3.2 in https://splunk.jfrog.io/splunk/ext-releases-local was cached in the local repository, resolution will not be reattempted until the update interval of splunk-artifactory has elapsed or updates are forced
+
+Try downloading the file manually from the project website.
+
+Then, install it using the command: 
+    mvn install:install-file -DgroupId=io.confluent -DartifactId=kafka-avro-serializer -Dversion=5.3.2 -Dpackaging=jar -Dfile=/path/to/file
+
+Alternatively, if you host your own repository you can deploy the file there: 
+    mvn deploy:deploy-file -DgroupId=io.confluent -DartifactId=kafka-avro-serializer -Dversion=5.3.2 -Dpackaging=jar -Dfile=/path/to/file -Durl=[url] -DrepositoryId=[id]
+
+Path to dependency: 
+	1) com.google.cloud.teleport:classic-templates:jar:1.0-SNAPSHOT
+	2) org.apache.beam:beam-runners-google-cloud-dataflow-java:jar:2.53.0
+	3) org.apache.beam:beam-sdks-java-io-kafka:jar:2.53.0
+	4) io.confluent:kafka-avro-serializer:jar:5.3.2
+
+
+  io.confluent:kafka-avro-serializer:jar:5.3.2
+
+from the specified remote repositories:
+  splunk-artifactory (https://splunk.jfrog.io/splunk/ext-releases-local, releases=true, snapshots=true),
+  ossrh (https://oss.sonatype.org/content/repositories/snapshots, releases=true, snapshots=true),
+  central (https://repo.maven.apache.org/maven2, releases=true, snapshots=false)
+
+[[1;33mWARNING[m] Failure to find io.confluent:kafka-schema-registry-client:jar:5.3.2 in https://splunk.jfrog.io/splunk/ext-releases-local was cached in the local repository, resolution will not be reattempted until the update interval of splunk-artifactory has elapsed or updates are forced
+
+Try downloading the file manually from the project website.
+
+Then, install it using the command: 
+    mvn install:install-file -DgroupId=io.confluent -DartifactId=kafka-schema-registry-client -Dversion=5.3.2 -Dpackaging=jar -Dfile=/path/to/file
+
+Alternatively, if you host your own repository you can deploy the file there: 
+    mvn deploy:deploy-file -DgroupId=io.confluent -DartifactId=kafka-schema-registry-client -Dversion=5.3.2 -Dpackaging=jar -Dfile=/path/to/file -Durl=[url] -DrepositoryId=[id]
+
+Path to dependency: 
+	1) com.google.cloud.teleport:classic-templates:jar:1.0-SNAPSHOT
+	2) org.apache.beam:beam-runners-google-cloud-dataflow-java:jar:2.53.0
+	3) org.apache.beam:beam-sdks-java-io-kafka:jar:2.53.0
+	4) io.confluent:kafka-schema-registry-client:jar:5.3.2
+
+
+  io.confluent:kafka-schema-registry-client:jar:5.3.2
+
+from the specified remote repositories:
+  splunk-artifactory (https://splunk.jfrog.io/splunk/ext-releases-local, releases=true, snapshots=true),
+  ossrh (https://oss.sonatype.org/content/repositories/snapshots, releases=true, snapshots=true),
+  central (https://repo.maven.apache.org/maven2, releases=true, snapshots=false)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M1:enforce[m [1m(enforce-banned-dependencies)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.8:prepare-agent[m [1m(default-prepare-agent)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/fedja/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/fedja/Desktop/fix/DataflowTemplates/v1/target/jacoco.exec,excludes=**/*InformationSchemaScanner.*:**/*AutoValue_*
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mprotobuf-maven-plugin:0.6.1:compile[m [1m(default)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] Compiling 2 proto file(s) to /home/fedja/Desktop/fix/DataflowTemplates/v1/target/generated-sources/protobuf/java
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mprotobuf-maven-plugin:0.6.1:compile-custom[m [1m(default)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] Compiling 2 proto file(s) to /home/fedja/Desktop/fix/DataflowTemplates/v1/target/generated-sources/protobuf/grpc-java
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mavro-maven-plugin:1.11.3:schema[m [1m(default)[m @ [36mclassic-templates[0;1m ---[m
+[[1;33mWARNING[m] Ignored the com.google.cloud.teleport.bigtable.BigtableCell.timestamp.logicalType property ("timestamp-micros"). It should probably be nested inside the "type" for the field.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 5 resources
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;34mINFO[m] Compiling 164 source files with javac [debug target 11] to target/classes
+[[1;33mWARNING[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/main/java/com/google/cloud/teleport/splunk/HttpEventPublisher.java:[108,19] [AutoValueMutable] An @AutoValue property that is a primitive array returns the original array, which can therefore be modified by the caller. If this is OK, you can suppress this warning with @SuppressWarnings("mutable"). Otherwise, you should replace the property with an immutable type, perhaps a simple wrapper around the original array.
+[[1;33mWARNING[m] Implicitly compiled files were not subject to annotation processing.
+  Use -proc:none to disable annotation processing or -implicit to specify a policy for implicit compilation.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/target/generated-sources/protobuf/java/com/google/cloud/teleport/spanner/proto/ExportProtos.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/target/generated-sources/protobuf/java/com/google/cloud/teleport/spanner/proto/ExportProtos.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/main/java/com/google/cloud/teleport/bigtable/BeamRowToBigtableFn.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/main/java/com/google/cloud/teleport/bigtable/BeamRowToBigtableFn.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 34 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :dependency
+[[1;34mINFO[m] Compiling 136 source files with javac [debug target 11] to target/test-classes
+[[1;33mWARNING[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/test/java/com/google/cloud/teleport/spanner/ddl/RandomDdlGenerator.java:[107,25] [AutoValueMutable] An @AutoValue property that is a primitive array returns the original array, which can therefore be modified by the caller. If this is OK, you can suppress this warning with @SuppressWarnings("mutable"). Otherwise, you should replace the property with an immutable type, perhaps a simple wrapper around the original array.
+[[1;33mWARNING[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/test/java/com/google/cloud/teleport/templates/SpannerToTextIT.java:[114,57] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Object for a varargs call
+  cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+[[1;33mWARNING[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/test/java/com/google/cloud/teleport/templates/SpannerToTextIT.java:[173,57] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Object for a varargs call
+  cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+[[1;33mWARNING[m] Implicitly compiled files were not subject to annotation processing.
+  Use -proc:none to disable annotation processing or -implicit to specify a policy for implicit compilation.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/test/java/com/google/cloud/teleport/util/DualInputNestedValueProviderTest.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/test/java/com/google/cloud/teleport/util/DualInputNestedValueProviderTest.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/test/java/com/google/cloud/teleport/bigtable/CassandraKeyUtilsTest.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/fedja/Desktop/fix/DataflowTemplates/v1/src/test/java/com/google/cloud/teleport/bigtable/CassandraKeyUtilsTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:3.2.1:check[m [1m(default)[m @ [36mclassic-templates[0;1m ---[m
+[[1;34mINFO[m] Starting audit...
+Audit done.
+[[1;34mINFO[m] You have 0 Checkstyle violations.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mnondex-maven-plugin:2.1.1:nondex[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mclassic-templates[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mnondex-maven-plugin:2.1.1:nondex[m [1m(default-cli)[m @ [36mclassic-templates[0;1m ---[m
+INFO: The original argline is: 
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=.nondex
+nondexExecid=clean_11hNiS7rjwgqi2Mvl1YElWbfF9jDxf2ZXzgZvBIm3g=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.243 s - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 1, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=M3JAQvE11bRXhHFGzJYx+gsdPvsuQeZMoXxcxCrI=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.215 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.214 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}", "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}", "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}", "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for M3JAQvE11bRXhHFGzJYx+gsdPvsuQeZMoXxcxCrI=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=974622
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=oaegkhIuhAykJ53BwPZ0sQ3JDBOclnfXrz7oyRKFOUI=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.284 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.281 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}", "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}", "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}", "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for oaegkhIuhAykJ53BwPZ0sQ3JDBOclnfXrz7oyRKFOUI=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1016066
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=lb7iYREjRhXK8dun7yCPBKC6Tb3nLy4+hsVIqxgtl74=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.246 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.244 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for lb7iYREjRhXK8dun7yCPBKC6Tb3nLy4+hsVIqxgtl74=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1057510
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=3fVjbu9fkepkvbvVXLFLY3wrUybfWyZuFv1kgl6LmB4=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.111 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.108 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}", "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}", "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}", "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for 3fVjbu9fkepkvbvVXLFLY3wrUybfWyZuFv1kgl6LmB4=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1098954
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=ah0Q1HPNH8pO7G73NNwQNy5IoHtyFc+v53hUoHEk3iM=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.392 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.388 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for ah0Q1HPNH8pO7G73NNwQNy5IoHtyFc+v53hUoHEk3iM=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1140398
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=iva2MfV7AnP54S2rZDzLKzAJsWKClNrZNqVt2S45ro=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.179 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.178 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for iva2MfV7AnP54S2rZDzLKzAJsWKClNrZNqVt2S45ro=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1181842
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=RDwqc58TqEMaDKzfRDtVZEyhmU00D+dQ+VKeaOA10JU=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.053 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.051 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null}"] in any order
+     but: not matched: "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for RDwqc58TqEMaDKzfRDtVZEyhmU00D+dQ+VKeaOA10JU=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1223286
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=fvRvRKaSebUVc09JuiQd4WXOvL4tlQF+Nzwlu380HWU=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.115 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.113 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for fvRvRKaSebUVc09JuiQd4WXOvL4tlQF+Nzwlu380HWU=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1264730
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=S8GtOWjnV+CyGhR80d7ETNoFaP4BQ3Xn99VaeHqWZA4=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.071 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.069 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}", "{\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"stacktrace\":null}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for S8GtOWjnV+CyGhR80d7ETNoFaP4BQ3Xn99VaeHqWZA4=
+INFO: Adding excluded groups to existing ones
+INFO: Creating new argline for Surefire
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1306174
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexJarDir=/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex
+nondexExecid=xSUkoGAZ2p9qAtwB01AtyHEkkv25sV0tdXrpnviLD8=
+nondexLogging=CONFIG
+test=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/fedja/.m2/repository/org/slf4j/slf4j-simple/1.7.36/slf4j-simple-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Reload4jLoggerFactory]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 4.052 s[1;31m <<< FAILURE![m - in com.google.cloud.teleport.templates.common.[1mDatastoreConvertersTest[m
+[[1;31mERROR[m] testCheckNoKeyAllInvalid(com.google.cloud.teleport.templates.common.DatastoreConvertersTest)  Time elapsed: 4.05 s  <<< FAILURE!
+java.lang.AssertionError: 
+RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}", "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:175)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:460)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:452)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:280)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:323)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junitcore.JUnitCore.run(JUnitCore.java:55)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.createRequestAndRun(JUnitCoreWrapper.java:137)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.executeEager(JUnitCoreWrapper.java:107)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:83)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:75)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+Caused by: java.lang.AssertionError: 
+Expected: iterable with items ["{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}", "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:18)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1690)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1670)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1299)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:1279)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1621)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1588)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:211)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:188)
+	at org.apache.beam.repackaged.direct_java.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:79)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:244)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:54)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.processElements(DirectTransformExecutor.java:165)
+	at org.apache.beam.runners.direct.DirectTransformExecutor.run(DirectTransformExecutor.java:129)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  DatastoreConvertersTest.testCheckNoKeyAllInvalid:280 RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable with items ["{\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\",\"message\":\"Datastore Entity Without Key\"}", "{\"stacktrace\":null,\"message\":\"Datastore Entity Without Key\",\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"] in any order
+     but: not matched: "{\"message\":\"Datastore Entity Without Key\",\"stacktrace\":null,\"data\":\"{\\\"properties\\\":{\\\"street\\\":{\\\"stringValue\\\":\\\"Some street\\\"},\\\"number\\\":{\\\"integerValue\\\":\\\"1\\\"}}}\"}"[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+INFO: Surefire failed when running tests for xSUkoGAZ2p9qAtwB01AtyHEkkv25sV0tdXrpnviLD8=
+[[1;34mINFO[m] NonDex SUMMARY:
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=M3JAQvE11bRXhHFGzJYx+gsdPvsuQeZMoXxcxCrI= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=oaegkhIuhAykJ53BwPZ0sQ3JDBOclnfXrz7oyRKFOUI= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=lb7iYREjRhXK8dun7yCPBKC6Tb3nLy4+hsVIqxgtl74= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1057510 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=3fVjbu9fkepkvbvVXLFLY3wrUybfWyZuFv1kgl6LmB4= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1098954 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=ah0Q1HPNH8pO7G73NNwQNy5IoHtyFc+v53hUoHEk3iM= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1140398 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=iva2MfV7AnP54S2rZDzLKzAJsWKClNrZNqVt2S45ro= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1181842 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=RDwqc58TqEMaDKzfRDtVZEyhmU00D+dQ+VKeaOA10JU= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1223286 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=fvRvRKaSebUVc09JuiQd4WXOvL4tlQF+Nzwlu380HWU= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1264730 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=S8GtOWjnV+CyGhR80d7ETNoFaP4BQ3Xn99VaeHqWZA4= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1306174 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexJarDir="/home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex" -DnondexExecid=xSUkoGAZ2p9qAtwB01AtyHEkkv25sV0tdXrpnviLD8= -DnondexLogging=CONFIG
+[[1;33mWARNING[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] *********
+[[1;34mINFO[m] All tests pass without NonDex shuffling
+[[1;34mINFO[m] ####################
+[[1;34mINFO[m] Across all seeds:
+[[1;34mINFO[m] com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid
+[[1;34mINFO[m] Test results can be found at: 
+[[1;34mINFO[m] file:///home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex/M3JAQvE11bRXhHFGzJYx+gsdPvsuQeZMoXxcxCrI=/test_results.html
+[[1;34mINFO[m] [NonDex] The id of this run is: M3JAQvE11bRXhHFGzJYx+gsdPvsuQeZMoXxcxCrI=
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  01:27 min
+[[1;34mINFO[m] Finished at: 2024-02-10T11:28:01+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32medu.illinois:nondex-maven-plugin:2.1.1:nondex[m [1m(default-cli)[m on project [36mclassic-templates[m: [1;31mUnable to execute mojo[m: There are test failures.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] Please refer to /home/fedja/Desktop/fix/DataflowTemplates/v1/.nondex/M3JAQvE11bRXhHFGzJYx+gsdPvsuQeZMoXxcxCrI= for the individual test results.
+[[1;31mERROR[m] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

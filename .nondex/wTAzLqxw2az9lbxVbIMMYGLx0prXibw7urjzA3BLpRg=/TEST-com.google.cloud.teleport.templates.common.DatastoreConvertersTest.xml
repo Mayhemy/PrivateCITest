@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="1" name="com.google.cloud.teleport.templates.common.DatastoreConvertersTest" time="0.001" errors="0" skipped="0">
+  <properties>
+    <property name="os.detected.version" value="6.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.392-b08"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/fedja/Desktop/fix/DataflowTemplates"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="os.detected.version.minor" value="5"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/fedja/Desktop/fix/DataflowTemplates"/>
+    <property name="os.detected.release.like.debian" value="true"/>
+    <property name="java.runtime.version" value="1.8.0_392-8u392-ga-1~22.04-b08"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="nondexRuns" value="10"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="os.detected.release.version" value="22.04"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.detected.version.major" value="6"/>
+    <property name="os.name" value="Linux"/>
+    <property name="os.detected.classifier" value="linux-x86_64"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="os.detected.arch" value="x86_64"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.detected.name" value="linux"/>
+    <property name="os.version" value="6.5.0-15-generic"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/fedja"/>
+    <property name="user.timezone" value="Europe/Belgrade"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="os.detected.release" value="ubuntu"/>
+    <property name="user.name" value="fedja"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -DnondexRuns=10 edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="os.detected.release.like.ubuntu" value="true"/>
+    <property name="java.version" value="1.8.0_392"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="com.google.cloud.teleport.templates.common.DatastoreConvertersTest" name="testCheckNoKeyAllInvalid" time="0.001">
+    <failure message="RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable over [&quot;{\&quot;textElementType\&quot;:\&quot;entity\&quot;,\&quot;message\&quot;:\&quot;Datastore Entity Without Key\&quot;,\&quot;textElementData\&quot;:\&quot;{\\&quot;properties\\&quot;:{\\&quot;street\\&quot;:{\\&quot;stringValue\\&quot;:\\&quot;Some street\\&quot;},\\&quot;number\\&quot;:{\\&quot;integerValue\\&quot;:\\&quot;1\\&quot;}}}\&quot;}&quot;, &quot;{\&quot;textElementData\&quot;:\&quot;{\\&quot;properties\\&quot;:{\\&quot;street\\&quot;:{\\&quot;stringValue\\&quot;:\\&quot;Some street\\&quot;},\\&quot;number\\&quot;:{\\&quot;integerValue\\&quot;:\\&quot;1\\&quot;}}}\&quot;,\&quot;textElementType\&quot;:\&quot;entity\&quot;,\&quot;message\&quot;:\&quot;Datastore Entity Without Key\&quot;}&quot;] in any order
+     got: &lt;[{&quot;message&quot;:&quot;Datastore Entity Without Key&quot;,&quot;textElementData&quot;:&quot;{\&quot;properties\&quot;:{\&quot;street\&quot;:{\&quot;stringValue\&quot;:\&quot;Some street\&quot;},\&quot;number\&quot;:{\&quot;integerValue\&quot;:\&quot;1\&quot;}}}&quot;,&quot;textElementType&quot;:&quot;entity&quot;}, {&quot;textElementData&quot;:&quot;{\&quot;properties\&quot;:{\&quot;street\&quot;:{\&quot;stringValue\&quot;:\&quot;Some street\&quot;},\&quot;number\&quot;:{\&quot;integerValue\&quot;:\&quot;1\&quot;}}}&quot;,&quot;message&quot;:&quot;Datastore Entity Without Key&quot;,&quot;textElementType&quot;:&quot;entity&quot;}]&gt;
+" type="java.lang.AssertionError">java.lang.AssertionError: RemoveNoKeys/DetectInvalidEntities.failures: 
+Expected: iterable over [&quot;{\&quot;textElementType\&quot;:\&quot;entity\&quot;,\&quot;message\&quot;:\&quot;Datastore Entity Without Key\&quot;,\&quot;textElementData\&quot;:\&quot;{\\&quot;properties\\&quot;:{\\&quot;street\\&quot;:{\\&quot;stringValue\\&quot;:\\&quot;Some street\\&quot;},\\&quot;number\\&quot;:{\\&quot;integerValue\\&quot;:\\&quot;1\\&quot;}}}\&quot;}&quot;, &quot;{\&quot;textElementData\&quot;:\&quot;{\\&quot;properties\\&quot;:{\\&quot;street\\&quot;:{\\&quot;stringValue\\&quot;:\\&quot;Some street\\&quot;},\\&quot;number\\&quot;:{\\&quot;integerValue\\&quot;:\\&quot;1\\&quot;}}}\&quot;,\&quot;textElementType\&quot;:\&quot;entity\&quot;,\&quot;message\&quot;:\&quot;Datastore Entity Without Key\&quot;}&quot;] in any order
+     got: &lt;[{&quot;message&quot;:&quot;Datastore Entity Without Key&quot;,&quot;textElementData&quot;:&quot;{\&quot;properties\&quot;:{\&quot;street\&quot;:{\&quot;stringValue\&quot;:\&quot;Some street\&quot;},\&quot;number\&quot;:{\&quot;integerValue\&quot;:\&quot;1\&quot;}}}&quot;,&quot;textElementType&quot;:&quot;entity&quot;}, {&quot;textElementData&quot;:&quot;{\&quot;properties\&quot;:{\&quot;street\&quot;:{\&quot;stringValue\&quot;:\&quot;Some street\&quot;},\&quot;number\&quot;:{\&quot;integerValue\&quot;:\&quot;1\&quot;}}}&quot;,&quot;message&quot;:&quot;Datastore Entity Without Key&quot;,&quot;textElementType&quot;:&quot;entity&quot;}]&gt;
+
+	at org.apache.beam.sdk.testing.PAssert$PAssertionSite.capture(PAssert.java:165)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:357)
+	at org.apache.beam.sdk.testing.PAssert.that(PAssert.java:349)
+	at com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid(DatastoreConvertersTest.java:271)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.apache.beam.sdk.testing.TestPipeline$1.evaluate(TestPipeline.java:327)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:18)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:24)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+	at org.apache.maven.surefire.junitcore.JUnitCoreWrapper.execute(JUnitCoreWrapper.java:62)
+	at org.apache.maven.surefire.junitcore.JUnitCoreProvider.invoke(JUnitCoreProvider.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.AssertionError: 
+Expected: iterable over [&quot;{\&quot;textElementType\&quot;:\&quot;entity\&quot;,\&quot;message\&quot;:\&quot;Datastore Entity Without Key\&quot;,\&quot;textElementData\&quot;:\&quot;{\\&quot;properties\\&quot;:{\\&quot;street\\&quot;:{\\&quot;stringValue\\&quot;:\\&quot;Some street\\&quot;},\\&quot;number\\&quot;:{\\&quot;integerValue\\&quot;:\\&quot;1\\&quot;}}}\&quot;}&quot;, &quot;{\&quot;textElementData\&quot;:\&quot;{\\&quot;properties\\&quot;:{\\&quot;street\\&quot;:{\\&quot;stringValue\\&quot;:\\&quot;Some street\\&quot;},\\&quot;number\\&quot;:{\\&quot;integerValue\\&quot;:\\&quot;1\\&quot;}}}\&quot;,\&quot;textElementType\&quot;:\&quot;entity\&quot;,\&quot;message\&quot;:\&quot;Datastore Entity Without Key\&quot;}&quot;] in any order
+     got: &lt;[{&quot;message&quot;:&quot;Datastore Entity Without Key&quot;,&quot;textElementData&quot;:&quot;{\&quot;properties\&quot;:{\&quot;street\&quot;:{\&quot;stringValue\&quot;:\&quot;Some street\&quot;},\&quot;number\&quot;:{\&quot;integerValue\&quot;:\&quot;1\&quot;}}}&quot;,&quot;textElementType&quot;:&quot;entity&quot;}, {&quot;textElementData&quot;:&quot;{\&quot;properties\&quot;:{\&quot;street\&quot;:{\&quot;stringValue\&quot;:\&quot;Some street\&quot;},\&quot;number\&quot;:{\&quot;integerValue\&quot;:\&quot;1\&quot;}}}&quot;,&quot;message&quot;:&quot;Datastore Entity Without Key&quot;,&quot;textElementType&quot;:&quot;entity&quot;}]&gt;
+
+	at org.junit.Assert.assertThat(Assert.java:780)
+	at org.junit.Assert.assertThat(Assert.java:738)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1320)
+	at org.apache.beam.sdk.testing.PAssert$AssertContainsInAnyOrder.apply(PAssert.java:1300)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:955)
+	at org.apache.beam.sdk.testing.PAssert$CheckRelationAgainstExpected.apply(PAssert.java:935)
+	at org.apache.beam.sdk.testing.PAssert.doChecks(PAssert.java:1251)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn.processElement(PAssert.java:1216)
+	at org.apache.beam.sdk.testing.PAssert$GroupedValuesCheckerDoFn$DoFnInvoker.invokeProcessElement(Unknown Source)
+	at org.apache.beam.runners.direct.repackaged.runners.core.SimpleDoFnRunner.invokeProcessElement(SimpleDoFnRunner.java:177)
+	at org.apache.beam.runners.direct.repackaged.runners.core.SimpleDoFnRunner.processElement(SimpleDoFnRunner.java:141)
+	at org.apache.beam.runners.direct.repackaged.runners.core.SimplePushbackSideInputDoFnRunner.processElementInReadyWindows(SimplePushbackSideInputDoFnRunner.java:70)
+	at org.apache.beam.runners.direct.ParDoEvaluator.processElement(ParDoEvaluator.java:182)
+	at org.apache.beam.runners.direct.DoFnLifecycleManagerRemovingTransformEvaluator.processElement(DoFnLifecycleManagerRemovingTransformEvaluator.java:51)
+	at org.apache.beam.runners.direct.TransformExecutor.processElements(TransformExecutor.java:146)
+	at org.apache.beam.runners.direct.TransformExecutor.run(TransformExecutor.java:110)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+</failure>
+  </testcase>
+</testsuite>

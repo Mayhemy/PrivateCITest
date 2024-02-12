@@ -37,6 +37,8 @@ const (
 	spotlessCheckCmd   = "spotless:check"
 	checkstyleCheckCmd = "checkstyle:check"
 
+	nondexRun = "edu.illinois:nondex-maven-plugin:2.1.1:nondex"
+
 	// regexes
 	javaFileRegex     = "\\.java$"
 	xmlFileRegex      = "\\.xml$"
@@ -59,6 +61,8 @@ type MavenFlags interface {
 	SkipJacoco() string
 	SkipShade() string
 	SkipSpotlessCheck() string
+	NonDexNumberOfRuns(int) string
+	SpecifyNonDexTest(string) string
 	SkipIntegrationTests() string
 	FailAtTheEnd() string
 	RunIntegrationTests() string
@@ -143,6 +147,10 @@ func (*mvnFlags) StaticBigtableInstance(instanceID string) string {
 func (*mvnFlags) StaticSpannerInstance(instanceID string) string {
 	return "-DspannerInstanceId=" + instanceID
 }
+
+func (*mvnFlags) NonDexNumberOfRuns(numberOfRuns id) string { return "-DnondexRuns=" + numberOfRuns }
+
+func (*mvnFlags) SpecifyNonDexTest(testPath string) string { return "-Dtest=" + testPath }
 
 func NewMavenFlags() MavenFlags {
 	return &mvnFlags{}
@@ -283,6 +291,26 @@ func SpotlessCheck() Workflow {
 
 func (*spotlessCheckWorkflow) Run(args ...string) error {
 	return op.RunMavenOnPom(unifiedPom, spotlessCheckCmd, args...)
+}
+
+type nonDexCheckWorkflow struct{}
+
+func NondexCheck() Workflow {
+	return &nonDexCheckWorkflow{}
+}
+
+func (*nonDexCheckWorkflow) Run(args ...string) error {
+	return op.RunMavenOnModule(unifiedPom, nondexRun, "v1", args...)
+}
+
+type runSingleTestWorkflow struct{}
+
+func RunSingleTestCheck() Workflow {
+	return &runSingleTestWorkflow{}
+}
+
+func (*runSingleTestWorkflow) Run(args ...string) error {
+	return op.RunMavenOnModule(unifiedPom, "test", "v1", args...)
 }
 
 type checkstyleCheckWorkflow struct{}
