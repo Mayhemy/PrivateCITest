@@ -148,7 +148,7 @@ func (*mvnFlags) StaticSpannerInstance(instanceID string) string {
 	return "-DspannerInstanceId=" + instanceID
 }
 
-func (*mvnFlags) NonDexNumberOfRuns(numberOfRuns id) string { return "-DnondexRuns=" + numberOfRuns }
+func (*mvnFlags) NonDexNumberOfRuns(numberOfRuns int) string { return "-DnondexRuns=" + numberOfRuns }
 
 func (*mvnFlags) SpecifyNonDexTest(testPath string) string { return "-Dtest=" + testPath }
 
