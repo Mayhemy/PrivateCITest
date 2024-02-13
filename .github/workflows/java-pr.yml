@@ -75,6 +75,7 @@ jobs:
       - name: Cleanup Java Environment
         uses: ./.github/actions/cleanup-java-env
   java_unit_tests:
+    # trigger pr actions
     name: Unit Tests
     needs: [java_build]
     timeout-minutes: 60
