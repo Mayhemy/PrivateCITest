@@ -89,7 +89,7 @@ jobs:
       - name: Run Unit Tests
         run: ./cicd/run-unit-tests --changed-files="${{ steps.setup-env.outputs.changed-files }}"
       - name: Run Flaky Test Without NonDex
-        run: ./cicd/run-wihtout-nondex
+        run: ./cicd/run-without-nondex
       - name: Run Flaky Test With NonDex
         run: ./cicd/run-nondex
       - name: Upload Unit Tests Report
