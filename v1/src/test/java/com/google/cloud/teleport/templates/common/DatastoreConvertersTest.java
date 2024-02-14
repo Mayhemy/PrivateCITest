@@ -15,9 +15,6 @@
  */
 package com.google.cloud.teleport.templates.common;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.cloud.teleport.templates.common.DatastoreConverters.CheckNoKey;
 import com.google.cloud.teleport.templates.common.DatastoreConverters.CheckSameKey;
 import com.google.cloud.teleport.templates.common.DatastoreConverters.EntityJsonPrinter;
@@ -37,17 +34,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
 import java.util.stream.Collectors;
 import org.apache.beam.sdk.testing.NeedsRunner;
 import org.apache.beam.sdk.testing.PAssert;
 import org.apache.beam.sdk.testing.TestPipeline;
 import org.apache.beam.sdk.transforms.Create;
-import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.transforms.DoFnTester;
-import org.apache.beam.sdk.transforms.ParDo;
-import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.PCollectionTuple;
 import org.apache.beam.sdk.values.TupleTag;
 import org.junit.Assert;
@@ -290,7 +282,6 @@ public class DatastoreConvertersTest implements Serializable {
 
     pipeline.run();
   }
-
 
   /** Test {@link DatastoreConverters.CheckNoKey} with both correct and invalid entities. */
   @Test
