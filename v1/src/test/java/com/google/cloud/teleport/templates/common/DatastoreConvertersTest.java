@@ -269,7 +269,7 @@ public class DatastoreConvertersTest implements Serializable {
               .setData(entityJsonPrinter.print(noKeyEntity))
               .build()
               .toJson();
-      expectedErrors.add(sortJsonString(errorMessage));
+      expectedErrors.add(errorMessage);
     }
 
     // Run the test
@@ -285,37 +285,12 @@ public class DatastoreConvertersTest implements Serializable {
                     .setFailureTag(failureTag)
                     .build());
 
-    PCollection<String> failureMessages = results.get(failureTag);
-
-    // sort the PCollection string to be in order
-    PCollection<String> actualParsedErrors = failureMessages.apply(ParDo.of(new SortJsonDoFn()));
-
     PAssert.that(results.get(successTag)).empty();
-    PAssert.that(actualParsedErrors).containsInAnyOrder(expectedErrors);
+    PAssert.that(results.get(failureTag)).containsInAnyOrder(expectedErrors);
 
     pipeline.run();
   }
 
-  static class SortJsonDoFn extends DoFn<String, String> {
-    @ProcessElement
-    public void processElement(@Element String json, OutputReceiver<String> out) {
-      try {
-        // Convert JSON string to map with sorted keys
-        out.output(sortJsonString(json));
-      } catch (JsonProcessingException e) {
-        throw new RuntimeException("Failed to process json string", e);
-      }
-    }
-  }
-
-  public static String sortJsonString(String json) throws JsonProcessingException {
-
-    ObjectMapper objectMapper = new ObjectMapper();
-    Map<String, Object> map =
-        objectMapper.readValue(json, new TypeReference<Map<String, Object>>() {});
-    Map<String, Object> sortedMap = new TreeMap<>(map); // Call the method to deeply sort the map
-    return objectMapper.writeValueAsString(sortedMap);
-  }
 
   /** Test {@link DatastoreConverters.CheckNoKey} with both correct and invalid entities. */
   @Test
