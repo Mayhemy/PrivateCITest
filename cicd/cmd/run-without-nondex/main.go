@@ -14,8 +14,6 @@ func main() {
 
 	mvnFlags := workflows.NewMavenFlags()
 	if err := workflows.RunSingleTestCheck().Run(
-		mvnFlags.IncludeDependencies(),
-		mvnFlags.IncludeDependents(),
 		mvnFlags.SkipCheckstyle(),
 		mvnFlags.SkipSpotlessCheck(),
 		mvnFlags.SpecifyNonDexTest("com.google.cloud.teleport.templates.common.DatastoreConvertersTest#testCheckNoKeyAllInvalid")); err != nil {

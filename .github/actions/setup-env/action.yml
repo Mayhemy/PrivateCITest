@@ -74,6 +74,3 @@ runs:
       with:
         cache-key: ${{ inputs.java-cache-key }}
         java-version: ${{ inputs.java-version }}
-
-
-# random
